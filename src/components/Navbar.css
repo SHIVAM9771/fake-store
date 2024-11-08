@@ -1,0 +1,47 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff; /* White background */
+    padding: 15px 30px; /* Increased padding for better appearance */
+    border-bottom: 1px solid #e0e0e0; /* Light gray border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky; /* Stick to the top */
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.logo {
+    font-size: 24px; /* Increase logo size */
+    font-weight: bold; /* Make logo bold */
+    color: #333; /* Dark color for the logo */
+}
+
+.navLinks {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.navLink {
+    margin-left: 20px; /* Spacing between links */
+    text-decoration: none; /* Remove underline */
+    color: #007BFF; /* Bootstrap primary color */
+    font-weight: 500; /* Medium weight for links */
+    display: flex; /* Flexbox for aligning icon and text */
+    align-items: center; /* Center icon and text vertically */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navLink i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.navLink:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+.cartCount {
+    margin-left: 20px; /* Spacing from the last link */
+    font-weight: 500; /* Medium weight for the count */
+    color: #555; /* Slightly lighter color for cart count */
+}
