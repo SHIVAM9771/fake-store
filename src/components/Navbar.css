@@ -1,47 +1,92 @@
+/* Style for the navbar */
 .navbar {
+    position: fixed; /* Fix navbar to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for aesthetics */
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background: #ffffff; /* White background */
-    padding: 15px 30px; /* Increased padding for better appearance */
-    border-bottom: 1px solid #e0e0e0; /* Light gray border */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    position: sticky; /* Stick to the top */
-    top: 0; /* Position at the top */
-    z-index: 1000; /* Ensure it stays on top of other elements */
+    align-items: center;
 }
 
+/* Ensure content below the navbar is not overlapped */
+body {
+    padding-top: 60px; /* Adjust this based on the navbar height */
+}
+
+/* Style for the logo */
 .logo {
-    font-size: 24px; /* Increase logo size */
-    font-weight: bold; /* Make logo bold */
-    color: #333; /* Dark color for the logo */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 10px; /* Adjust left padding */
 }
 
+/* Hover effect on logo */
+.logo:hover {
+    color: #ff9d00; /* Change color on hover */
+}
+
+/* Style for the links and cart items */
 .navLinks {
     display: flex;
-    align-items: center; /* Center items vertically */
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .navLink {
-    margin-left: 20px; /* Spacing between links */
-    text-decoration: none; /* Remove underline */
-    color: #007BFF; /* Bootstrap primary color */
-    font-weight: 500; /* Medium weight for links */
-    display: flex; /* Flexbox for aligning icon and text */
-    align-items: center; /* Center icon and text vertically */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    font-size: 1rem;
 }
 
-.navLink i {
-    margin-right: 5px; /* Space between icon and text */
-}
-
-.navLink:hover {
-    color: #0056b3; /* Darker shade on hover */
+.navLink:hover{
+    color: #f39c12;
 }
 
 .cartCount {
-    margin-left: 20px; /* Spacing from the last link */
-    font-weight: 500; /* Medium weight for the count */
-    color: #555; /* Slightly lighter color for cart count */
+    font-size: 0.9rem;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+/* Additional styles for mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .navLinks {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navLinks.mobile {
+        display: flex; /* Show links when the mobile menu is active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu in mobile */
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
 }

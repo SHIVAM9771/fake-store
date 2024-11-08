@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 import store from "./store/store";
 
 function App() {
+  document.title = "Stockify | Store";
+
   return (
     <div className="App">
       <Provider store={store} >

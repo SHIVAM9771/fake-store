@@ -8,6 +8,7 @@ import {
 import './Cart.css'; 
 
 function Cart() {
+  document.title = "Cart | Stockify";
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
